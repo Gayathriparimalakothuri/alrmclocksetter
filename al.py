@@ -81,13 +81,9 @@ c_date.insert(0,"DD-MM-YY : ")
 def activate():
 	t=Thread(target=alarm)
 	t.start()
-
-
-
+	
 def deactivate():
 	mixer.music.stop()
-
-
 
 selected=IntVar()
 
@@ -101,10 +97,6 @@ def sound_alarm():
 	rad2 = Radiobutton(frame_body,font=('arial 10 bold'), value=2, text='Deactivate',bg='#B0C1D4',fg='#AD1414',command=deactivate,variable=selected)
 	rad2.place(x=290,y=230)
    
-
-#Tk().withdraw() # to avoid showing the root window
-
-
 def alarm():
 	while True:
 		control=1
@@ -127,15 +119,10 @@ def alarm():
 			if  alrm_period == period and alrm_hr == hr and alrm_min == min and alrm_sec == sec :
 				if alrm_day == day and alrm_date == date :
 					sound_alarm()
-					messagebox.showinfo(title="Message",message="Remainder")
-					
+					#messagebox.showinfo(title="Message",message="Remainder")
+					frame_body.after(1000, messagebox.showinfo(title="Message",message="Remainder"))
 		sleep(1)
 
-
-
-
-
 mixer.init()
-				
 
 x.mainloop()
