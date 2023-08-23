@@ -65,11 +65,11 @@ c_period.current(0)
 c_period.place(x=495,y=120)
 
 day=Label(frame_body,text='day' , height=1,font=('ivy 12 bold'),fg='#AD1414',bg='#B0C1D4')
-day.place(x=60,y=160)
+day.place(x=190,y=160)
 c_day=Combobox(frame_body,width=4,font=('arial 12'))
 c_day['values']=('select ','Sun','Mon','Tue','Wed','Thu','Fri','Sat')
 c_day.current(0)
-c_day.place(x=60,y=190)
+c_day.place(x=160,y=190)
 
 date=Label(frame_body,text='date', height=1, font=('ivy 12 bold') ,fg='#AD1414',bg="#B0C1D4")
 date.place(x=90,y=160)
